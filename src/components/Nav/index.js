@@ -1,27 +1,68 @@
-import React from 'react';
-import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Navbar, Nav, Button, Modal } from 'react-bootstrap';
 import './style.css'
+import { Link } from "react-router-dom";
+
+
+
 
 function Navigator () {
+
+        const [show, setShow] = useState(false);
+        const [show1, setShow1] = useState(false);
+      
+        const handleClose = () => setShow(false);
+        const handleShow = () => setShow(true);
+        const handleClose1 = () => setShow1(false);
+        const handleShow1 = () => setShow1(true);
+              
+      
     return (
         <div>
             <Navbar className='navigator' bg="dark" expand="lg">
-                <Navbar.Brand className='navName' href="#home">Samplified</Navbar.Brand>
+                <Navbar.Brand className='navName'><Link to='/'>Samplified</Link></Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="me-auto">
-                    <Nav.Link href="#home">Home</Nav.Link>
-                    <Nav.Link href="#link">Link</Nav.Link>
-                    <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-                    </NavDropdown>
+                <Nav className="ms-auto">
+                    <Nav.Link onClick={handleShow} >Sign in</Nav.Link>
+                    <Nav.Link onClick={handleShow1}>Sign Up</Nav.Link>
+                    <Nav.Link to="/sounds">Sounds</Nav.Link>
+
                 </Nav>
                 </Navbar.Collapse>
             </Navbar>
+            <>
+      
+            <Modal show={show} onHide={handleClose}>
+              <Modal.Header closeButton>
+                <Modal.Title>Modal heading</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+              <Modal.Footer>
+                <Button variant="secondary" onClick={handleClose}>
+                  Close
+                </Button>
+                <Button variant="primary" onClick={handleClose}>
+                  Save Changes
+                </Button>
+              </Modal.Footer>
+            </Modal>
+
+            <Modal show={show1} onHide={handleClose1}>
+              <Modal.Header closeButton>
+                <Modal.Title>Modal heading</Modal.Title>
+              </Modal.Header>
+              <Modal.Body>A second modal, does it work</Modal.Body>
+              <Modal.Footer>
+                <Button variant="secondary" onClick={handleClose1}>
+                  Close
+                </Button>
+                <Button variant="primary" onClick={handleClose1}>
+                  Save Changes
+                </Button>
+              </Modal.Footer>
+            </Modal>
+          </>
         </div>
     )
 }

@@ -20,13 +20,13 @@ function Navigator () {
     return (
         <div>
             <Navbar className='navigator' bg="dark" expand="lg">
-                <Navbar.Brand className='navName'><Link to='/'>Samplified</Link></Navbar.Brand>
+                <Navbar.Brand as={Link} className='navName' to='/'>Samplified</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ms-auto">
                     <Nav.Link onClick={handleShow} >Sign in</Nav.Link>
                     <Nav.Link onClick={handleShow1}>Sign Up</Nav.Link>
-                    <Nav.Link to="/sounds">Sounds</Nav.Link>
+                    <Nav.Link as={Link} to="/sounds">Sounds</Nav.Link>
 
                 </Nav>
                 </Navbar.Collapse>

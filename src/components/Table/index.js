@@ -1,7 +1,7 @@
-import React from 'react';
+import {Table} from 'react-bootstrap';
 
 
-function Table(){
+const TableDisplay = () => {
     return(
         <Table striped bordered hover>
             <thead>
@@ -33,7 +33,6 @@ function Table(){
             </tbody>
     </Table>
     )
+};
 
-}
-
-export default Table;
+export default TableDisplay;

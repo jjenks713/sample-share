@@ -1,7 +1,7 @@
 import React from 'react';
 import Carousel from '../components/Carousel';
 
-function Main(){
+function Index(){
     return (
         <div>
             <Carousel></Carousel>
@@ -10,4 +10,4 @@ function Main(){
     )
 }
 
-export default Main;
+export default Index;

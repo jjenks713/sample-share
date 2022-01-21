@@ -1,14 +1,14 @@
 import React from 'react';
-import Table from '../components/Table';
+import TableDisplay from '../components/Table';
 
 
-function Main(){
+function Sounds(){
     return (
         <div>
-            <Table></Table>
+            <TableDisplay></TableDisplay>
         </div>
 
     )
 }
 
-export default Main;
+export default Sounds;

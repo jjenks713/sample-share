@@ -11,12 +11,13 @@ function App() {
       <Router>
       <Nav fixed="top" />
         <Switch>
-            <Route exact path="/">
-              <Index />           
-            </Route>
             <Route path="/sounds">
                 <Sounds />         
             </Route>
+            <Route path="/">
+              <Index />           
+            </Route>
+
         </Switch>
       </Router>
 

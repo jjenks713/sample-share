@@ -33,36 +33,7 @@ function Navigator () {
             </Navbar>
             <>
       
-            <Modal show={show} onHide={handleClose}>
-              <Modal.Header closeButton>
-                <Modal.Title>Sign in</Modal.Title>
-              </Modal.Header>
-              <Modal.Body>
-                  <Form>
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
-                      <Form.Label>Email address</Form.Label>
-                      <Form.Control type="email" placeholder="Enter email" />
-                      <Form.Text className="text-muted">
-                        We'll never share your email with anyone else.
-                      </Form.Text>
-                    </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="formBasicPassword">
-                      <Form.Label>Password</Form.Label>
-                      <Form.Control type="password" placeholder="Password" />
-                    </Form.Group>
-                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                      <Form.Check type="checkbox" label="Check me out" />
-                    </Form.Group>
-                    <Button variant="primary" type="submit">
-                      Submit
-                    </Button>
-                  </Form>
-            </Modal.Body>
-              <Modal.Footer>
-
-              </Modal.Footer>
-            </Modal>
 
             <Modal show={show1} onHide={handleClose1}>
               <Modal.Header closeButton>
@@ -71,22 +42,22 @@ function Navigator () {
               <Modal.Body>
               <Form>
 
-                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Group className="mb-3" controlId="signUpUsername">
                       <Form.Label>Username</Form.Label>
                       <Form.Control type="password" placeholder="Username" />
                     </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Group className="mb-3" controlId="signUpName">
                       <Form.Label>First Name</Form.Label>
-                      <Form.Control type="password" placeholder="First Name" />
+                      <Form.Control type="name" placeholder="First Name" />
                     </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Group className="mb-3" controlId="signUpLastName">
                       <Form.Label>Last Name</Form.Label>
-                      <Form.Control type="password" placeholder="Last Name" />
+                      <Form.Control type="name" placeholder="Last Name" />
                     </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                    <Form.Group className="mb-3" controlId="signUpEmail">
                       <Form.Label>Email address</Form.Label>
                       <Form.Control type="email" placeholder="Enter email" />
                       <Form.Text className="text-muted">
@@ -94,7 +65,7 @@ function Navigator () {
                       </Form.Text>
                     </Form.Group>
 
-                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Group className="mb-3" controlId="signUpPassword">
                       <Form.Label>Password</Form.Label>
                       <Form.Control type="password" placeholder="Password" />
                     </Form.Group>

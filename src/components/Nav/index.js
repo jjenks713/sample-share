@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Navbar, Nav, Button, Modal } from 'react-bootstrap';
+import { Navbar, Nav, Button, Modal, Form, CloseButton } from 'react-bootstrap';
 import './style.css'
 import { Link } from "react-router-dom";
 
@@ -35,16 +35,32 @@ function Navigator () {
       
             <Modal show={show} onHide={handleClose}>
               <Modal.Header closeButton>
-                <Modal.Title>Modal heading</Modal.Title>
+                <Modal.Title>Sign in</Modal.Title>
               </Modal.Header>
-              <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+              <Modal.Body>
+                  <Form>
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                      <Form.Label>Email address</Form.Label>
+                      <Form.Control type="email" placeholder="Enter email" />
+                      <Form.Text className="text-muted">
+                        We'll never share your email with anyone else.
+                      </Form.Text>
+                    </Form.Group>
+
+                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                      <Form.Label>Password</Form.Label>
+                      <Form.Control type="password" placeholder="Password" />
+                    </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                      <Form.Check type="checkbox" label="Check me out" />
+                    </Form.Group>
+                    <Button variant="primary" type="submit">
+                      Submit
+                    </Button>
+                  </Form>
+            </Modal.Body>
               <Modal.Footer>
-                <Button variant="secondary" onClick={handleClose}>
-                  Close
-                </Button>
-                <Button variant="primary" onClick={handleClose}>
-                  Save Changes
-                </Button>
+
               </Modal.Footer>
             </Modal>
 
@@ -52,14 +68,47 @@ function Navigator () {
               <Modal.Header closeButton>
                 <Modal.Title>Modal heading</Modal.Title>
               </Modal.Header>
-              <Modal.Body>A second modal, does it work</Modal.Body>
+              <Modal.Body>
+              <Form>
+
+                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                      <Form.Label>Username</Form.Label>
+                      <Form.Control type="password" placeholder="Username" />
+                    </Form.Group>
+
+                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                      <Form.Label>First Name</Form.Label>
+                      <Form.Control type="password" placeholder="First Name" />
+                    </Form.Group>
+
+                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                      <Form.Label>Last Name</Form.Label>
+                      <Form.Control type="password" placeholder="Last Name" />
+                    </Form.Group>
+
+                    <Form.Group className="mb-3" controlId="formBasicEmail">
+                      <Form.Label>Email address</Form.Label>
+                      <Form.Control type="email" placeholder="Enter email" />
+                      <Form.Text className="text-muted">
+                        We'll never share your email with anyone else.
+                      </Form.Text>
+                    </Form.Group>
+
+                    <Form.Group className="mb-3" controlId="formBasicPassword">
+                      <Form.Label>Password</Form.Label>
+                      <Form.Control type="password" placeholder="Password" />
+                    </Form.Group>
+
+                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                      <Form.Check type="checkbox" label="Check me out" />
+                    </Form.Group>
+                    <Button variant="primary" type="submit">
+                      Submit
+                    </Button>
+                  </Form>
+              </Modal.Body>
               <Modal.Footer>
-                <Button variant="secondary" onClick={handleClose1}>
-                  Close
-                </Button>
-                <Button variant="primary" onClick={handleClose1}>
-                  Save Changes
-                </Button>
+
               </Modal.Footer>
             </Modal>
           </>

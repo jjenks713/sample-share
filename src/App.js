@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Nav from './components/Nav';
 import Index from './pages/index';
 import Sounds from './pages/sounds'
+import User from './pages/user'
 
 function App() {
   return (
@@ -13,6 +14,9 @@ function App() {
         <Switch>
             <Route path="/sounds">
                 <Sounds />         
+            </Route>
+            <Route path="/user"> {/* user id will go with path :id */}
+                <User/>         
             </Route>
             <Route path="/">
               <Index />           

@@ -1,4 +1,4 @@
-import { Navbar, Nav, Button, Modal, Form, CloseButton } from 'react-bootstrap';
+/* import { Navbar, Nav, Button, Modal, Form, CloseButton } from 'react-bootstrap';
 
 
 function SignInModal() {
@@ -45,7 +45,7 @@ function SignInModal() {
 }
 
 export default SignInModal;
-
+ */
 
 
 

@@ -13,8 +13,14 @@ function UserPage () {
         console.log("what")
     }
 
-    const genres = ["House", "Bass-Music", "EDM", "Pop", "Cinematic", "Hip-Hop", "Global", "Live"]
+    const genres = ["House", "Bass-Music", "EDM", "Pop", "Cinematic", "Hip-Hop", "Global", "Live"];
     const [genre, setGenre] = useState("");
+
+    const instruments = ["FX", "Drums", "Vocals", "Percussion", "Guitar", "Bass", "Keys", "Strings", "Synth"];
+    const [instrument, setInsturment] = useState("");
+
+    const loros = ["Loop", "One-shot"];
+    const [loro, setLoro] = useState("");
 
 
     return (
@@ -66,8 +72,9 @@ function UserPage () {
                             </Form.Group>
 
 
-                            <label htmlFor="genre">
-                                genre
+                            <Form.Label htmlFor="genre">
+                                Genre
+                                <InputGroup>
                                 <select
                                     id="genre"
                                     value={genre}
@@ -83,70 +90,55 @@ function UserPage () {
                                             ))
                                         }
                                 </select>
-                            </label>
-                            <Form.Group htmlFor="genre">
-                            <Form.Label>Genre</Form.Label>
-                            <InputGroup>
-                                    <DropdownButton
-                                    variant="outline-secondary"
-                                    title="Genre"
-                                    id="input-group-dropdown-1"
-                                    >
-                                    <Dropdown.Item >House</Dropdown.Item>
-                                    <Dropdown.Item >Bass-Music</Dropdown.Item>
-                                    <Dropdown.Item >EDM</Dropdown.Item>
-                                    <Dropdown.Item >Pop</Dropdown.Item>
-                                    <Dropdown.Item >Cinematic</Dropdown.Item>
-                                    <Dropdown.Item >Hip-Hop</Dropdown.Item>
-                                    <Dropdown.Item >Global</Dropdown.Item>
-                                    <Dropdown.Item >Live</Dropdown.Item>
-                                    <Dropdown.Divider />
-                                    <Dropdown.Item >Separated link</Dropdown.Item>
-                                    </DropdownButton>
-                                    <FormControl aria-label="Text input with dropdown button" />
                                 </InputGroup>
-                            </Form.Group>
 
-                            <Form.Group className="mb-3" controlId="signUpEmail">
-                            <Form.Label>Instrument</Form.Label>
-                            <InputGroup>
-                                    <DropdownButton
-                                    variant="outline-secondary"
-                                    title="Instrument"
-                                    id="input-group-dropdown-1"
+                            </Form.Label>
+
+                            <Form.Label htmlFor="instrument">
+                                Instrument
+                                <InputGroup>
+                                <select
+                                    id="instrument"
+                                    value={instrument}
+                                    onChange={e => setInsturment(e.target.value)}
+                                    onBlur={e => setInsturment(e.target.value)}
                                     >
-                                    <Dropdown.Item >House</Dropdown.Item>
-                                    <Dropdown.Item >Bass-Music</Dropdown.Item>
-                                    <Dropdown.Item >EDM</Dropdown.Item>
-                                    <Dropdown.Item >Pop</Dropdown.Item>
-                                    <Dropdown.Item >Cinematic</Dropdown.Item>
-                                    <Dropdown.Item >Hip-Hop</Dropdown.Item>
-                                    <Dropdown.Item >Global</Dropdown.Item>
-                                    <Dropdown.Item >Live</Dropdown.Item>
-                                    <Dropdown.Divider />
-                                    <Dropdown.Item >Separated link</Dropdown.Item>
-                                    </DropdownButton>
-                                    <FormControl aria-label="Text input with dropdown button" />
+                                        <option></option>
+                                        {
+                                            instruments.map(instrument => (
+                                                <option value={instrument} key={instrument}>
+                                                    {instrument}
+                                                </option>
+                                            ))
+                                        }
+                                </select>
                                 </InputGroup>
-                            </Form.Group>
-                            
-                            <Form.Group className="mb-3" controlId="signUpEmail">
-                            <Form.Label>Loop or One-Shot</Form.Label>
-                            <InputGroup>
-                                    <DropdownButton
-                                    variant="outline-secondary"
-                                    title="Loop or Oneshot"
-                                    id="input-group-dropdown-1"
+
+                            </Form.Label>
+
+                            <Form.Label htmlFor="loop-oneshot">
+                                Loop or One Shot
+                                <InputGroup>
+                                <select
+                                    id="loro"
+                                    value={loro}
+                                    onChange={e => setLoro(e.target.value)}
+                                    onBlur={e => setLoro(e.target.value)}
                                     >
-                                    <Dropdown.Item >Loop</Dropdown.Item>
-                                    <Dropdown.Item >One-shot</Dropdown.Item>
-           
-                                    <Dropdown.Divider />
-                                    <Dropdown.Item >Separated link</Dropdown.Item>
-                                    </DropdownButton>
-                                    <FormControl aria-label="Text input with dropdown button" />
+                                        <option></option>
+                                        {
+                                            loros.map(loro => (
+                                                <option value={loro} key={loro}>
+                                                    {loro}
+                                                </option>
+                                            ))
+                                        }
+                                </select>
                                 </InputGroup>
-                            </Form.Group>
+
+                            </Form.Label>
+
+
 
                             <Form.Group className="mb-3" controlId="signUpPassword">
                             <button>Choose File</button>
